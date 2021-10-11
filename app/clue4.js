@@ -11,7 +11,60 @@
 // output: 7
 
 function daysPosition(day, offset) {
-  // TODO YOUR CODE HERE
+  if (offset) {
+    switch (day) {
+      case "Sunday":
+        return 7
+        break;
+      case "Saturday":
+        return 6
+        break;
+      case "Friday":
+        return 5
+        break;
+      case "Thursday":
+        return 4
+        break;
+      case "Wednesday":
+        return 3;
+      case "Tuesday":
+        return 2
+        break;
+      case "Monday":
+        return 1
+        break;
+      default: {
+        return "That's not a day of the week"
+      }
+    }
+  } else {
+    switch (day) {
+      case "Sunday":
+        return 1
+        break;
+      case "Saturday":
+        return 7
+        break;
+      case "Friday":
+        return 5
+        break;
+      case "Thursday":
+        return 5
+        break;
+      case "Wednesday":
+        return 4
+        break;
+      case "Tuesday":
+        return 3
+        break;
+      case "Monday":
+        return 2
+        break;
+      default: {
+        return "That's not a day of the week"
+      }
+    }
+  }
 }
 
 
