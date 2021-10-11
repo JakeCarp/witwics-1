@@ -119,5 +119,5 @@ let suspect = {
 }
 
 function attemptCapture(suspect) {
-  return (suspect.athome && suspect.asleep ? true : false)
+  return (suspect.atHome && suspect.asleep ? true : false)
 }

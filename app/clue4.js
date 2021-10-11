@@ -13,56 +13,56 @@
 function daysPosition(day, offset) {
   if (offset) {
     switch (day) {
-      case "Sunday":
+      case "sunday":
         return 7
         break;
-      case "Saturday":
+      case "saturday":
         return 6
         break;
-      case "Friday":
+      case "friday":
         return 5
         break;
-      case "Thursday":
+      case "thursday":
         return 4
         break;
-      case "Wednesday":
+      case "wednesday":
         return 3;
-      case "Tuesday":
+      case "tuesday":
         return 2
         break;
-      case "Monday":
+      case "monday":
         return 1
         break;
-      default: {
+      default:
         return "That's not a day of the week"
-      }
+
     }
   } else {
     switch (day) {
-      case "Sunday":
+      case "sunday":
         return 1
         break;
-      case "Saturday":
+      case "saturday":
         return 7
         break;
-      case "Friday":
+      case "friday":
         return 5
         break;
-      case "Thursday":
+      case "thursday":
         return 5
         break;
-      case "Wednesday":
+      case "wednesday":
         return 4
         break;
-      case "Tuesday":
+      case "tuesday":
         return 3
         break;
-      case "Monday":
+      case "monday":
         return 2
         break;
-      default: {
+      default:
         return "That's not a day of the week"
-      }
+
     }
   }
 }
@@ -85,7 +85,34 @@ function daysPosition(day, offset) {
  */
 
 function golfScore(score, par) {
-  // TODO YOUR CODE HERE
+  let diff = 0
+  if (score > par) {
+    diff += score - par
+  } else {
+    diff += score - par
+  }
+
+  switch (diff) {
+    case -3:
+      return "Ace"
+      break;
+    case -2:
+      return "Eagle"
+      break;
+    case -1:
+      return "Birdie"
+      break;
+    case 0:
+      return "Par"
+    case 1:
+      return "Bogie"
+      break;
+    case 2:
+      return "Double Bogie"
+      break;
+    default:
+      return "Ouch"
+  }
 }
 
 
@@ -111,5 +138,24 @@ function golfScore(score, par) {
 let count = 0
 
 function cardCounter(card) {
-  // TODO YOUR CODE HERE
+
+  switch (card) {
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+      count++
+      break;
+    case '10':
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--
+      break;
+  }
+
+  return (count > 0 ? count + ' ' + 'Bet' : count + ' ' + 'Hold')
+
 }
